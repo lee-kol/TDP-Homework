@@ -15,6 +15,7 @@ export class MoviesService {
     @InjectRepository(Movie)
     private movieRepository: Repository<Movie>,
   ) {}
+
   findAll(): Promise<Movie[]> {
     return this.movieRepository.find();
   }
@@ -64,7 +65,7 @@ export class MoviesService {
 
   async remove(title: string): Promise<void> {
     if (!title) {
-      throw new BadRequestException('Title is required to update a movie');
+      throw new BadRequestException('Title is required to delete a movie');
     }
 
     const result = await this.movieRepository.delete({ title });

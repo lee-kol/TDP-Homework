@@ -89,7 +89,7 @@ describe('MoviesController', () => {
         'rating must be less than or equal to 10',
       );
       expect(error.response.message).toContain(
-        'rating must be less than or equal to 2025',
+        'rating must be less than or equal to 10',
       );
     }
   });
