@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { MoviesModule } from './movies/movies.module';
 import { ShowtimesModule } from './showtimes/showtimes.module';
+import { BookingsModule } from './bookings/bookings.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { ShowtimesModule } from './showtimes/showtimes.module';
     DatabaseModule,
     MoviesModule,
     ShowtimesModule,
+    BookingsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
